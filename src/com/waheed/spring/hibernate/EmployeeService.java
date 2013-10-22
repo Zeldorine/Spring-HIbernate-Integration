@@ -12,7 +12,7 @@ public interface EmployeeService {
 
 	public void deleteEmployee(Employee employee);
 
-	public Employee getEmployee(long employeeId);
+	public Employee getEmployee(long employeeId) throws Exception;
 
 	public void updateEmployee(Employee e);
 

@@ -28,7 +28,7 @@ public class Operation {
         display();
     }
     
-    protected Employee getEmployee(long employeeId) {
+    protected Employee getEmployee(long employeeId) throws Exception {
         Employee employee = employeeService.getEmployee(employeeId);
         return employee;
     }

@@ -53,8 +53,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	@Transactional
-	public Employee getEmployee(long employeeId) {
+	public Employee getEmployee(long employeeId) throws Exception {
 		Employee employee = employeeDao.getEmployee(employeeId);
+		if(employee == null) throw new Exception("Employee not found");
 		return employee;
 	}
 

@@ -12,7 +12,7 @@ public class Main {
 
     private static final String APP_FILE = "beans.xml";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         //loads context information from an XML file which is present in classpath.
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(APP_FILE);

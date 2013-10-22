@@ -17,7 +17,6 @@
 	<!-- It allow us to use @Autowire, @Required and @Qualifier annotations -->
 	<context:annotation-config />
 
-<<<<<<< HEAD
 	<!-- Will give access to Employee database -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
@@ -34,13 +33,6 @@
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306" />
-=======
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/Employees" />
->>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
 		<property name="user" value="root" />
 		<property name="password" value="root123" />
 		<property name="minPoolSize" value="8" />
@@ -50,7 +42,6 @@
 
 	<bean id="operation" class="com.waheed.spring.hibernate.Operation" />
 
-<<<<<<< HEAD
 	<!-- Updater is used to automatically update DB schema upon startup if Employee version has changed -->
 	<bean id="LiquibaseUpdater" class="liquibase.integration.spring.SpringLiquibase" depends-on="createDB">
 		<property name="dataSource" ref="dataSource" />
@@ -70,12 +61,6 @@
 	<!-- Session factory required to access internal Employee database -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" depends-on="createDB">
-=======
-
-	<!-- Session factory required to access internal TM database -->
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
->>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
@@ -85,11 +70,7 @@
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect"> org.hibernate.dialect.HSQLDialect</prop>
-<<<<<<< HEAD
 				<prop key="hibernate.show_sql">true</prop>
-=======
-				<prop key="hibernate.show_sql">false</prop>
->>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
 				<prop key="hibernate.hbm2ddl.auto">create</prop>
 			</props>
 		</property>

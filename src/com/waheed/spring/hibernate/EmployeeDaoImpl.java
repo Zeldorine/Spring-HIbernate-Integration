@@ -7,6 +7,7 @@ import java.util.Iterator;
 
 import org.springframework.stereotype.Repository;
 
+<<<<<<< HEAD
 /**
  * Data access object for {@link Employee}s.
  * 
@@ -40,4 +41,38 @@ public class EmployeeDaoImpl extends DaoImpl implements EmployeeDao {
 	public Iterator<Employee> getEmployees() {
 		return getObjects(Employee.class);
 	}
+=======
+
+/**
+ * @author abdul
+ *
+ */
+@Repository
+public class EmployeeDaoImpl  extends DaoImpl implements EmployeeDao{
+    
+    @Override
+    public long addEmployee(Employee employee) {
+        return createObject(employee);
+    }
+
+    @Override
+    public void deleteEmployee(Employee employee) {
+        deleteObject(employee);
+    }
+
+    @Override
+    public Employee getEmployee(long id) {
+        return getObject(Employee.class, id);
+    }
+
+    @Override
+    public Employee updateEmployee(Employee employee) {
+        return updateObject(employee);
+    }
+
+    @Override
+    public Iterator<Employee> getEmployees() {
+        return getObjects(Employee.class);
+    }
+>>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
 }

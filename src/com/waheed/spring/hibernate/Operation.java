@@ -28,7 +28,11 @@ public class Operation {
         display();
     }
     
+<<<<<<< HEAD
     protected Employee getEmployee(long employeeId) throws Exception {
+=======
+    protected Employee getEmployee(long employeeId) {
+>>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
         Employee employee = employeeService.getEmployee(employeeId);
         return employee;
     }

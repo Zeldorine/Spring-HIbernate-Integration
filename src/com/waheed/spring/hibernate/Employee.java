@@ -10,11 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
-<<<<<<< HEAD
  * This class represents the Employee schema.
  * 
-=======
->>>>>>> d37206e1a158fe2c043f9d87a423223c43f14f2b
  * @author abdul
  */
 @Entity
